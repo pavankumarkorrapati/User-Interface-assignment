@@ -1,6 +1,21 @@
+require("dotenv").config();
 const express = require('express');
+const mongoose = require("mongoose");
 const app = express();
 const path = require('path');
+
+
+
+const userRoutes = require('./server/routes/user');
+const postRoutes = require('./server/routes/post');
+
+
+mongoose.connect(process.env.dbURL)
+   .then(console.log("DB Connected!"))
+   .catch(error => console.log(error))
+
+
+
 
 app.use(express.json());
 
@@ -16,8 +31,8 @@ app.use(function(_req,res,next){
     app.get('/', (_req, res) => res.sendFile(path.join(__dirname, '/public', 'index.html')));
     
     
-    
-    
+    app.use('/user',userRoutes);
+    app.use('/post', postRoutes);
     
     
     const PORT = process.env.PORT || 3000;
