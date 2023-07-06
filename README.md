@@ -1,1 +1,1 @@
-![ERD image!](/client/public/images/logo.png "ERD")
+![ERD image!](/public/images/ER-Diagram.png "ERD")
