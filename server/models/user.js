@@ -28,7 +28,7 @@ async function register(username,email,password) {
     password: hashed
   });
 
-  return newUser;
+  return newUser._doc;
 }
 
 
