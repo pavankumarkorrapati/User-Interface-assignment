@@ -13,7 +13,7 @@ const COMMENT = () => {
     console.log(commentState);
     try {
       const data = await fetchData("/user/createpost", {
-        comment: commentState,
+        COMMENT,
         username: ""
       }, "POST");
       if (!data.message) {
