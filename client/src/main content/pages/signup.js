@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import {useContext} from "react";
-import UserContext from "../context/usercontext"
+import UserContext from "../context/usercontext";
 
 
 
@@ -46,7 +46,7 @@ const REGISTER = () => {
       .then((data) => {
         if (!data.message) {
           console.log(data);
-          navigate("/Profile");
+          navigate("/postcomment");
         }
       })
       .catch((error) => {

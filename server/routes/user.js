@@ -39,7 +39,7 @@ router
     } catch(error) {
       res.status(401).send({ message: error.message });
     }
-  })
+  });
 
 // 3. export router for use in index.js
 module.exports = router;

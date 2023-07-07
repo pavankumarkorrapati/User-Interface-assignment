@@ -20,12 +20,9 @@ const Profile= () => {
  
   const onSubmit = (e) => {
    e.preventDefault();
-   console.log(user)
-   fetchData("/user/delete",
-   {
-     user
-   },
-   "POST")
+   fetchData("/user/delete", { id: user.id }, "DELETE")
+
+
    .then((data) => {
      if(!data.message) {
        console.log(data)
@@ -48,7 +45,13 @@ const Profile= () => {
          
         <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/am-a-19-year-old-multimedia-artist-student-from-manila--21.png" />
        </div>
-       <input type="submit" className="btn btn-primary" onChange={onchange} value="DeleteUser" />
+       <input
+  type="submit"
+  className="btn btn-primary"
+  value="DeleteUser"
+  onChange={onchange}
+/>
+
      </form>
 
         </div>

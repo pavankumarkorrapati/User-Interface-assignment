@@ -8,6 +8,7 @@ export function UserProvider({children}) {
     username: "",
     email: "",
     password: "",
+    comment:"",
     authenticated: false
   })
 

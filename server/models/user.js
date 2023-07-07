@@ -53,8 +53,9 @@ async function updatePassword(id, password) {
 
 //DELETE
 async function deleteUser(id) {
-  await User.deleteOne({"_id": id});
-};
+  await User.deleteOne({ "_id": id });
+}
+
 
 // utility functions
 async function getUser(username) {
